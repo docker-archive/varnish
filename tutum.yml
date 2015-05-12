@@ -1,10 +1,8 @@
-web:
-  image: tutum/hello-world
-  links:
-    - "varnish:varnish"
+backend:
+  image: 'tutum/hello-world:latest'
 varnish:
-  image: tutum/varnish
+  image: 'tutum/varnish:latest'
+  links:
+    - backend
   ports:
-    - 80:80
-  environment:
-    - BACKEND_PORT=8080
+    - '80:80'
