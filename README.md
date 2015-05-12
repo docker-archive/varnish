@@ -1,5 +1,7 @@
 # tutum-docker-varnish
 
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
 Base image to run a Varnish server
 
 ## Usage
@@ -24,4 +26,3 @@ If you want to use your own custom VCL file:
 
 * `tutum/varnish:3.0` for latest 3.0.x release
 * `tutum/varnish:4.0` for latest 4.0.x release
-
