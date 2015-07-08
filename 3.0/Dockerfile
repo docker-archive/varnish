@@ -15,6 +15,8 @@ ENV BACKEND_PORT 80
 ENV CONTENT -b backend:$BACKEND_PORT
 # Or, if you want to use a VCL file, use the following:
 #ENV CONTENT -f /etc/varnish/default.vcl
+# Or, if you want to use a VCL file by passing the contents, use the following:
+#ENV CONTENT_VCL <CONTENTS_OF_VCL_FILE>
 
 ## Which cache storage to use
 # File based:
