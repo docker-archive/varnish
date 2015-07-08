@@ -25,5 +25,5 @@ ENV CACHE file,/var/lib/varnish/varnish_storage.bin,256m
 #ENV CACHE malloc,256m
 
 VOLUME /var/lib/varnish
-
-CMD ["/bin/bash", "-c", "/usr/sbin/varnishd -a :$LISTEN_PORT $CONTENT -s $CACHE -S /etc/varnish/secret -F $VARNISH_OPTS"]
+ADD run.sh /run.sh
+CMD ["/run.sh"]
