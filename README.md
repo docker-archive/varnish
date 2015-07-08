@@ -21,6 +21,10 @@ If you want to use your own custom VCL file:
 
 	docker run -d -e CONTENT="-f /etc/varnish/default.vcl" -v $PWD/default.vcl:/etc/varnish/default.vcl -p 80:80 tutum/varnish
 
+If you want to use your own custom VCL file passing in its contents:
+
+	docker run -d -e CONTENT_VCL="`awk 1 ORS='\\n' file.vcl`" -p 80:80 tutum/varnish
+
 
 ## Tags available
 
